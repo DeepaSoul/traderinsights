@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "62c08169-d176-42b7-be66-17915c84fbf1",
+		"name": "traderinsights",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21363361"
+	},
+	"item": [
+		{
+			"name": "getMarketTrendInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basehost}}/getMarketTrendInfo?country=za",
+					"host": [
+						"{{basehost}}"
+					],
+					"path": [
+						"getMarketTrendInfo"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "za"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMarketTrendInfoAggregate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basehost}}/getMarketTrendInfoAggregate?country=za&date=2000-01-01",
+					"host": [
+						"{{basehost}}"
+					],
+					"path": [
+						"getMarketTrendInfoAggregate"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "za"
+						},
+						{
+							"key": "date",
+							"value": "2000-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMarketTrendInfoAggregate Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basehost}}/getMarketTrendInfoAggregate?country=za&date=2000-01-01",
+					"host": [
+						"{{basehost}}"
+					],
+					"path": [
+						"getMarketTrendInfoAggregate"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "za"
+						},
+						{
+							"key": "date",
+							"value": "2000-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "basehost",
+			"value": "http://localhost:8000"
+		}
+	]
+}
