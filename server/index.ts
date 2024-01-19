@@ -8,7 +8,7 @@ import cors from "cors";
 import {
   T_GetCurrencyHistoricalValues,
   T_GetMarketTrendInfoResult,
-} from "./types";
+} from "../common/types";
 import ConnectToCache from "./connectCache";
 import { T_RedisClientType } from "./types/redis";
 
