@@ -28,14 +28,20 @@ type T_GetMarketTrendInfoResult = {
 };
 
 type T_GetCurrencyHistoricalValues = {
-    success:boolean
-    timestamp:number
-    historical:boolean
-    base:string
-    date:Date
-    rates: {[key: string]: number}
+  success: boolean;
+  timestamp: number;
+  historical: boolean;
+  base: string;
+  date: Date;
+  rates: { [key: string]: number };
 };
 
-type T_GetMarketTrendInfoAggregate = T_GetMarketTrendInfoResultTrends & {historical_value: number};
+type T_GetMarketTrendInfoAggregate = T_GetMarketTrendInfoResultTrends & {
+  historical_value: number;
+};
 
-export { T_GetMarketTrendInfoResult, T_GetCurrencyHistoricalValues, T_GetMarketTrendInfoAggregate };
+export type {
+  T_GetMarketTrendInfoResult,
+  T_GetCurrencyHistoricalValues,
+  T_GetMarketTrendInfoAggregate,
+};
