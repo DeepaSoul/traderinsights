@@ -2,8 +2,10 @@ import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Trendlist from "./components/trendList";
 
-function App() {
-  const queryClient = new QueryClient();
+const App = () => {
+  const queryClient = new QueryClient({
+    defaultOptions: { queries: { staleTime: 1000 * 60 * 2 } }, //only refetch information after 2min
+  });
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -12,6 +14,6 @@ function App() {
       </div>
     </QueryClientProvider>
   );
-}
+};
 
 export default App;

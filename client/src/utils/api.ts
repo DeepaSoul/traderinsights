@@ -1,5 +1,5 @@
 import Axios, { AxiosRequestConfig, Method } from "axios";
-const API_URL4 = process.env.API_URL || "http://localhost:8000";
+const API_URL4 = process.env.API_URL || "http://localhost:8000/api/v1";
 
 const api = async (
   endpoint: string,

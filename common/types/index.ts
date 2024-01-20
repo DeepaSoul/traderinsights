@@ -18,13 +18,15 @@ type T_GetMarketTrendInfoResultNews = {
   post_time_utc: Date;
 };
 
+type T_MarketTrendsData = {
+  trends: T_GetMarketTrendInfoResultTrends[];
+  news: T_GetMarketTrendInfoResultNews[];
+};
+
 type T_GetMarketTrendInfoResult = {
   status: string;
   request_id: string;
-  data: {
-    trends: T_GetMarketTrendInfoResultTrends[];
-    news: T_GetMarketTrendInfoResultNews[];
-  };
+  data: T_MarketTrendsData;
 };
 
 type T_GetCurrencyHistoricalValues = {
@@ -40,8 +42,16 @@ type T_GetMarketTrendInfoAggregate = T_GetMarketTrendInfoResultTrends & {
   historical_value: number;
 };
 
+type QueryResponse<T> = {
+  success: boolean;
+  error: string;
+  results: T;
+};
+
 export type {
   T_GetMarketTrendInfoResult,
   T_GetCurrencyHistoricalValues,
   T_GetMarketTrendInfoAggregate,
+  QueryResponse,
+  T_MarketTrendsData,
 };
