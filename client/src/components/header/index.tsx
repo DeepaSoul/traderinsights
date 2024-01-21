@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { dayBefore } from "../../utils/constants";
 
 type HeaderComponentProps = {
@@ -9,7 +9,7 @@ type HeaderComponentProps = {
 const HeaderComponent = ({ date, setDate }: HeaderComponentProps) => {
   return (
     <div className="header">
-      <h1>Welcome</h1>
+      <h1>Welcome to Trader Insights</h1>
       <input
         type="date"
         min={dayBefore.toDateString()}

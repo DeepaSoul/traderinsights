@@ -11,7 +11,7 @@ const getCurrencyHistoricalValues = async (
   cachceDbClient?: T_RedisClientType
 ): Promise<number> => {
   try {
-    const dataCacheKey = `${currencies_compare}:${date.toDateString()}`;
+    const dataCacheKey = `${currency_base}/${currencies_compare}:${date.toDateString()}`;
 
     if (cachceDbClient) {
       const getCacheValue = await cachceDbClient.get(dataCacheKey);
