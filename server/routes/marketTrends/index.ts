@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getMarketTrendInfoResults } from "../../controllers/marketTrends";
+import { getMarketTrendInfoAggregate } from "../../controllers/marketTrends/aggregate";
 
 const router = Router();
 
@@ -12,7 +13,7 @@ router.route("/getMarketTrendInfo").get((req, res, next) => {
 
 // GET {baseUrl}/trends/getMarketTrendInfoAggregate
 router.route("/getMarketTrendInfoAggregate").get((req, res, next) => {
-  getMarketTrendInfoResults(req, res);
+  getMarketTrendInfoAggregate(req, res);
 });
 
 export default router;
