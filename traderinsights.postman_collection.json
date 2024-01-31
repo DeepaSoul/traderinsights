@@ -12,11 +12,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{basehost}}/getMarketTrendInfo?country=za",
+					"raw": "{{basehost}}/trends/getMarketTrendInfo?country=za",
 					"host": [
 						"{{basehost}}"
 					],
 					"path": [
+						"trends",
 						"getMarketTrendInfo"
 					],
 					"query": [
@@ -30,26 +31,31 @@
 			"response": []
 		},
 		{
-			"name": "getMarketTrendInfoAggregate",
+			"name": "getCurrencyHistoricalValues",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{basehost}}/getMarketTrendInfoAggregate?country=za&date=2000-01-01",
+					"raw": "{{basehost}}/conversion/getCurrencyHistoricalValues?date=2000-01-01&currency_base=GBP&currencies_compare=ZAR",
 					"host": [
 						"{{basehost}}"
 					],
 					"path": [
-						"getMarketTrendInfoAggregate"
+						"conversion",
+						"getCurrencyHistoricalValues"
 					],
 					"query": [
 						{
-							"key": "country",
-							"value": "za"
-						},
-						{
 							"key": "date",
 							"value": "2000-01-01"
+						},
+						{
+							"key": "currency_base",
+							"value": "GBP"
+						},
+						{
+							"key": "currencies_compare",
+							"value": "ZAR"
 						}
 					]
 				}
@@ -57,16 +63,17 @@
 			"response": []
 		},
 		{
-			"name": "getMarketTrendInfoAggregate Copy",
+			"name": "getMarketTrendInfoAggregate",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{basehost}}/getMarketTrendInfoAggregate?country=za&date=2000-01-01",
+					"raw": "{{basehost}}/trends/getMarketTrendInfoAggregate?country=za&date=2000-01-01",
 					"host": [
 						"{{basehost}}"
 					],
 					"path": [
+						"trends",
 						"getMarketTrendInfoAggregate"
 					],
 					"query": [
@@ -107,7 +114,7 @@
 	"variable": [
 		{
 			"key": "basehost",
-			"value": "http://localhost:8000"
+			"value": "http://localhost:8000/api/v1"
 		}
 	]
 }
